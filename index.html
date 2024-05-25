@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Rohit Kumar Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /*======================================
+        //--//-->   ABOUT
+        ======================================*/
+        
+        .about-mf .box-shadow-full {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        
+        .about-mf .about-img {
+            margin-bottom: 2rem;
+        }
+        
+        .about-mf .about-img img {
+            margin-left: 10px;
+        }
+        
+        .skill-mf .progress {
+            margin: .5rem 0 1.2rem 0;
+            border-radius: 0;
+            height: .7rem;
+        }
+        
+        .skill-mf .progress .progress-bar {
+            height: .7rem;
+            background-color: #ffbd39;
+        }
+        /* Animation styles */
+        
+        #typing-animation {
+            position: relative;
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 3s steps(20, end) infinite;
+        }
+        
+        #typing-animation:before {
+            content: "";
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: #ccc;
+            animation: typing-cursor 0.5s ease-in-out infinite;
+        }
+        
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+        
+        @keyframes typing-cursor {
+            from {
+                width: 5px;
+            }
+            to {
+                width: 0;
+            }
+        }
+        /* project image zoom effect */
+        
+        .zoom-effect {
+            overflow: hidden;
+            transition: transform 0.3s ease-out;
+        }
+        
+        .zoom-effect:hover {
+            transform: scale(1.1);
+        }
+        
+        .head {
+            color: black;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Rohit Kumar</a>
+            <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+            <div class="collapse navbar-collapse" id="ftco-nav" style="">
+                <ul class="navbar-nav nav ml-auto">
+                    <li class="nav-item"><a href="#home-section" class="nav-link" class="head"><span>Home</span></a></li>
+                    <li class="nav-item"><a href="#about-section" class="nav-link" class="head"><span>About</span></a></li>
+                    <li class="nav-item"><a href="#resume-section" class="nav-link" class="head"><span>Resume & Experience</span></a></li>
+                    <li class="nav-item"><a href="#project-section" class="nav-link" class="head"><span>Projects</span></a></li>
+                    <li class="nav-item"><a href="#contact-section" class="nav-link" class="head"><span>Contact</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="home-section" class="hero">
+        <div class="home-slider  owl-carousel">
+            <div class="slider-item ">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+                        <div class="one-third js-fullheight order-md-last img" style="height: 300px; margin: 150px; margin-left: 500px; background-image: url(images/bg_main.png);">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                            <div class="text">
+                                <span class="subheading">Hello, Welcome to my Portfolio!</span>
+                                <h1 class="mb-4 mt-3">I'm <span>Rohit Kumar</span></h1>
+                                <span id="typing-animation"></span>
+                                <script>
+                                    const typingAnimationElement = document.getElementById('typing-animation');
+                                    const typingTexts = [
+                                        'B.Tech Student  ',
+                                    ];
+
+                                    function playTypingAnimation(text) {
+                                        for (let i = 0; i < text.length; i++) {
+                                            setTimeout(() => {
+                                                typingAnimationElement.textContent += text[i];
+                                            }, i * 200);
+                                        }
+                                        setTimeout(() => {
+                                            typingAnimationElement.textContent = '';
+                                            playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                                        }, text.length * 200);
+                                    }
+                                    playTypingAnimation(typingTexts[0]);
+                                </script>
+                                <br><br>
+                                <h2>A Certified FullStack Developer</h2>
+                                <p><a href="https://www.linkedin.com/in/rohit-kumar-02114422a/" class="btn btn-primary py-3 px-4">LinkedIn</a>
+                                    <a href="https://github.com/Rohitkumar9835" class="btn btn-primary py-3 px-4">My works</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="row d-flex align-items-stretch">
+                    <div class="col-md-6 col-lg-5 d-flex">
+                        <div class="img-about img d-flex align-items-stretch">
+                            <div class="overlay">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-5">
+                                        <div class="about-img">
+                                            <img src="images/me.png" class="img-fluid rounded b-shadow-a" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-7">
+                                        <div class="about-info">
+                                            <p><span class="title-s">Name: </span> <span>Rohit Kumar</span></p>
+                                            <p><span class="title-s">Job Role: </span> <span>FullStack Developer</span></p>
+                                            <p><span class="title-s">Experience: </span> <span>2 Months</span></p>
+                                            <p><span class="title-s">Address: </span> <span>Ambala, Haryana, India</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-mf">
+                                    <p class="title-s">Skills</p>
+                                    <span>Javascript</span> <span class="pull-right">80%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>C++</span> <span class="pull-right">85%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>Node.js</span> <span class="pull-right">80%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>Express.js</span> <span class="pull-right">70%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>SQL</span> <span class="pull-right">70%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>MongoDB</span> <span class="pull-right">65%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>API</span> <span class="pull-right">75%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>Html , Css</span> <span class="pull-right">85%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>Python</span> <span class="pull-right">80%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>React.js</span> <span class="pull-right">70%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>C</span> <span class="pull-right">75%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>TypeScript</span> <span class="pull-right">60%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>Distributed Systems (Learning)</span> <span class="pull-right">50%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>Design Patterns</span> <span class="pull-right">65%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>Linux</span> <span class="pull-right">75%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-7 pl-lg-5 d-flex align-items-center">
+                        <div class="about-text">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="about-quote">
+                                        <p class="text">
+                                            I am an aspiring FullStack Developer with a strong background in Computer Science and a passion for creating interactive web and mobile applications.
+                                        </p>
+                                    </div>
+                                    <div class="about-list">
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <p class="mb-2"><span class="title-s">Name: </span> <span>Rohit Kumar</span></p>
+                                            </li>
+                                            <li>
+                                                <p class="mb-2"><span class="title-s">Profile: </span> <span>FullStack Developer</span></p>
+                                            </li>
+                                            <li>
+                                                <p class="mb-2"><span class="title-s">Email: </span> <span>rohitk84007@gmail.com</span></p>
+                                            </li>
+                                            <li>
+                                                <p class="mb-2"><span class="title-s">Phone: </span> <span>+91-9835318676</span></p>
+                                            </li>
+                                            <li>
+                                                <p class="mb-2"><span class="title-s">GitHub: </span> <span><a href="https://github.com/Rohitkumar9835">github.com/Rohitkumar9835</a></span></p>
+                                            </li>
+                                            <li>
+                                                <p class="mb-2"><span class="title-s">LinkedIn: </span> <span><a href="https://linkedin.com/in/rohit-kumar-02114422a">linkedin.com/in/rohit-kumar-02114422a</a></span></p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="socials-a">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item">
+                                                <a href="https://www.linkedin.com/in/rohit-kumar-02114422a/">
+                                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="https://github.com/Rohitkumar9835">
+                                                    <i class="fa fa-github" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="https://twitter.com/">
+                                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="https://www.instagram.com/">
+                                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="resume-box">
+                                        <a href="resume.pdf" class="btn btn-primary py-3 px-4">Download Resume</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ftco-section ftco-no-pb goto-here" id="resume-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-10 text-center">
+                    <h2 class="heading-section">Resume</h2>
+                    <h3 class="subheading">My Work Experience</h3>
+                </div>
+            </div>
+            <div class="row d-flex">
+                <div class="col-md-12">
+                    <div class="resume-wrap">
+                        <span class="date">2024</span>
+                        <h2>Front-end Developer Intern</h2>
+                        <span class="position">Code Clause</span>
+                        <p>Implemented front-end functionalities using HTML, CSS, and JavaScript.</p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="resume-wrap">
+                        <span class="date">2024</span>
+                        <h2>Front-end Developer Intern</h2>
+                        <span class="position">Cognify</span>
+                        <p>Designed and developed user interfaces using HTML, CSS, and JavaScript.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-10 text-center">
+                    <h2 class="heading-section">Education</h2>
+                </div>
+            </div>
+            <div class="row d-flex">
+                <div class="col-md-12">
+                    <div class="resume-wrap">
+                        <span class="date">2021 - 2025</span>
+                        <h2>Bachelor of Technology, Computer Science Engineering</h2>
+                        <span class="position">Maharishi Markandeshwar University, India</span>
+                        <p>CGPA: 7.91</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ftco-section ftco-no-pb" id="project-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-10 text-center">
+                    <h2 class="heading-section">Projects</h2>
+                </div>
+            </div>
+            <div class="row d-flex">
+                <div class="col-md-4 d-flex">
+                    <div class="project-wrap">
+                        <a href="#" class="img zoom-effect" style="background-image: url(images/project-1.jpg);"></a>
+                        <div class="text">
+                            <h3>Fitness Mobile App</h3>
+                            <p>Developed a fitness mobile application called FitBuddy using Android Studio, Java, XML, and SQLite. This app serves as a personal fitness companion, allowing users to track workouts, set goals, and monitor their progress.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex">
+                    <div class="project-wrap">
+                        <a href="#" class="img zoom-effect" style="background-image: url(images/project-2.jpg);"></a>
+                        <div class="text">
+                            <h3>Web Socket Chat App</h3>
+                            <p>Developed ChatSocket, a web socket-based chat application using Visual Studio, HTML, CSS, and JavaScript. This application enables real-time chat conversations among users, providing an interactive communication platform.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex">
+                    <div class="project-wrap">
+                        <a href="#" class="img zoom-effect" style="background-image: url(images/project-3.jpg);"></a>
+                        <div class="text">
+                            <h3>Iot based Bridge Guard System</h3>
+                            <p>Developed an Iot system using load cells, Arduino, and servo motors for real-time bridge weight monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ftco-section ftco-no-pb" id="contact-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-10 text-center">
+                    <h2 class="heading-section">Contact</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <form action="#" class="bg-light p-4 contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="ftco-footer ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>
+                        &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> All rights reserved | Designed by Rohit Kumar
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
